@@ -1,0 +1,79 @@
+.carac {
+    background-color: lightsteelblue;
+    border: 1px;
+    border-style: solid;
+    border-radius: 100px;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.textCarac {
+    position: relative;
+    top: 92px;
+    font-weight: bold;
+    border: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.quart {
+    position: relative;
+    border: 1px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.textQuart {
+    position: relative;
+}
+.textQuartHaut {
+    position: relative;
+    top: 66px;
+}
+.textQuartBas {
+    position: relative;
+    top: 21px;
+}
+.quart1 {
+    top: -19px;
+    left: -1px;
+    border-right-style: dotted;
+    border-bottom-style: dotted;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.quart2 {
+    top: -121px;
+    left: 100px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.quart3 {
+    top: -122px;
+    left: -1px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 0px;
+}
+
+.quart4 {
+    top: -221px;
+    left: 100px;
+    border-left-style: dotted;
+    border-top-style: dotted;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 100px;
+}

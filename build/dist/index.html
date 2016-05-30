@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	
+	<base href="/">
+
+    <!-- build:css(..) app/styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) app/styles/style.css -->
+	<!-- injector:css -->
+	<link rel="stylesheet" type="text/css" href="app/styles/styles.css">
+	<!-- endinjector -->
+    <!-- endbuild -->
+    
+	<title>Sphere</title>
+</head>
+	<body ng-app="sphere" ng-cloak class="ng-cloak">
+
+		<div ng-view class="container"></div>
+		
+    	<!-- build:js(..) app/scripts/vendor.js -->
+    	<!-- bower:js -->
+    	<script src="bower_components/angular/angular.js"></script>
+    	<script src="bower_components/angular-animate/angular-animate.js"></script>
+    	<script src="bower_components/angular-aria/angular-aria.js"></script>
+    	<script src="bower_components/angular-messages/angular-messages.js"></script>
+    	<script src="bower_components/angular-route/angular-route.js"></script>
+    	<script src="bower_components/angular-material/angular-material.js"></script>
+    	<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    	<!-- endbower -->
+    	<!-- endbuild -->
+
+		<!-- build:js(.tmp) app/scripts/scripts.js -->
+		<!-- injector:js -->
+		<script src="app/modules/application.js"></script>
+		<script src="app/modules/glob/glob.js"></script>
+		<script src="app/modules/tech/route-config.js"></script>
+		<script src="app/modules/tech/tech.js"></script>
+		<script src="app/modules/views/templateCache.js"></script>
+		<script src="app/modules/glob/accueil/accueil.js"></script>
+		<script src="app/modules/glob/accueil/controller/accueilController.js"></script>
+		<script src="app/modules/glob/accueil/directives/enteteDirective.js"></script>
+		<!-- endinjector -->
+		<!-- endbuild -->
+	</body>
+</html>
