@@ -1,0 +1,10 @@
+{
+  "ambientDependencies": {
+    "angular": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular.d.ts#17ef40452039d19e06dc2a3815ea898c505860fa",
+    "angular-animate": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-animate.d.ts#3c26c6546fab58b39d04d6ae40bacfa9a25dd196",
+    "angular-material": "github:DefinitelyTyped/DefinitelyTyped/angular-material/angular-material.d.ts#2d0a1b1502610025bd55ce8eaa48069da8a16c82",
+    "angular-ui-router": "github:DefinitelyTyped/DefinitelyTyped/angular-ui-router/angular-ui-router.d.ts#655f8c1bf3c71b0e1ba415b36309604f79326ac8",
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#cf2a968f0edd7d30773f7d23fe3708fa029d5ab7",
+    "angular-route": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-route.d.ts#4ba57e605bd71bf7248de65aac0b4f50e3eb1c9e"
+  }
+}
