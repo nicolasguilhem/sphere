@@ -1,79 +1,113 @@
-.carac {
-    background-color: lightsteelblue;
+.caracGroup {
     border: 1px;
     border-style: solid;
-    border-radius: 100px;
+    border-radius: 80px;
     margin: 10px;
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 220px;
     text-align: center;
+}
+
+.carac {
+    border: 1px;
+    border-style: solid;
+    border-radius: 80px;
+    margin: 10px;
+    width: 160px;
+    height: 160px;
+    text-align: center;
+    top: 17px;
+    left: -11px;
+    position: relative;
 }
 
 .textCarac {
     position: relative;
-    top: 92px;
+    top: 70px;
     font-weight: bold;
     border: 1px;
     border-style: solid;
-    border-radius: 3px;
+    border-radius: 12px;
     padding: 5px;
+    z-index: 2;
+    text-transform: capitalize;
+    font-size: small;
 }
 
 .quart {
     position: relative;
     border: 1px;
-    width: 100px;
-    height: 100px;
-    text-align: center;
+    width: 80px;
+    height: 80px;
 }
 
 .textQuart {
     position: relative;
+    text-transform: capitalize;
+    font-size: small;
 }
 .textQuartHaut {
     position: relative;
-    top: 66px;
+    top: 50px;
 }
 .textQuartBas {
     position: relative;
-    top: 21px;
+    top: 13px;
 }
 .quart1 {
     top: -19px;
-    left: -1px;
     border-right-style: dotted;
     border-bottom-style: dotted;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
 }
 
 .quart2 {
-    top: -121px;
-    left: 100px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    top: -100px;
+    left: 80px;
 }
 
 .quart3 {
-    top: -122px;
-    left: -1px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 0px;
+    top: -100px;
 }
 
 .quart4 {
-    top: -221px;
-    left: 100px;
+    top: -180px;
+    left: 80px;
     border-left-style: dotted;
     border-top-style: dotted;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 100px;
+}
+
+.carac1 {
+    background: #c32b2b;
+}
+
+.carac1.caracGroup {
+    background: rgba(195, 43, 43, 0.5);
+}
+
+.carac1.carac {
+    background: rgba(195, 43, 43, 0.5);
+}
+
+.carac2 {
+    background: #61bd3b;
+}
+
+.carac2.caracGroup {
+    background: rgba(97, 189, 59, 0.5);
+}
+
+.carac2.carac {
+    background: rgba(97, 189, 59, 0.5);
+}
+
+.carac3 {
+    background: #45b0bb;
+}
+
+.carac3.caracGroup {
+    background: rgba(69, 176, 187, 0.5);
+}
+
+.carac3.carac {
+    background: rgba(69, 176, 187, 0.5);
 }
