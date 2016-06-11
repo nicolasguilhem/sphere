@@ -1,3 +1,3 @@
 'use strict';
 	
-angular.module('sphere',['ngRoute', 'sphere.glob', 'sphere.tech' ]);
+angular.module('sphere',['ngRoute', 'ngMaterial','sphere.glob', 'sphere.tech' ]);

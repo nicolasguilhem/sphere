@@ -65,7 +65,7 @@
 .textQuart {
     position: relative;
     text-transform: capitalize;
-    font-size: x-small;
+    font-size: small;
 }
 .textQuartHaut {
     position: relative;
@@ -73,7 +73,7 @@
 }
 .textQuartBas {
     position: relative;
-    top: 9px;
+    top: 11px;
 }
 .quart1 {
     top: -19px;
@@ -133,26 +133,31 @@
     background: rgba(69, 176, 187, 0.5);
 }
 
-.valeurCarac {
-    position: absolute;
-    width: 25px;
+.champSaisi {
+    width: 31px;
     text-align: center;
-    height: 20px;
-    top: 26px;
-    left: 26px;
+    height: 14px;
     border-radius: 6px;
     border-style: solid;
+    font-size: small;
+    background-color: white;
+}
+
+.valeurCarac {
+    position: absolute;
+    top: 29px;
+    left: 23px;
 }
 
 .valeurCaracCumulAttaque {
-    top: -27px;
-    left: 65px;
+    top: -24px;
+    left: 62px;
     background: white;
 }
 
 .valeurCaracCumulDefense {
-    top: 161px;
-    left: 65px;
+    top: 164px;
+    left: 62px;
     background: white;
 }
 
@@ -161,8 +166,31 @@
     top: -183px;
     left: 170px;
     border-radius: 20px;
-    width: 668px;
+    width: 300px;
     height: 200px;
     padding: 5px;
     text-align: left;
+}
+
+.lstTalents {
+    position: relative;
+    top: -405px;
+    left: 500px;
+    border-radius: 20px;
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    text-align: left;
+}
+
+html, body {
+    background-color: cornsilk;
+}
+
+table {
+    margin-top: 8px;
+}
+
+tr:hover {
+    background-color: rgba(0, 0, 0, 0.15);
 }

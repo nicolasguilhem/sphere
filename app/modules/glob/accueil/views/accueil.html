@@ -1,112 +1,475 @@
 <div>
 	<div class="caracGroup carac1">
 		<div class="carac carac1">
-			<span class="valeurCarac valeurCaracCumulAttaque">{{ (accueilCtrl.carac11 + accueilCtrl.carac12) }}</span>
+			<span class="champSaisi valeurCarac valeurCaracCumulAttaque">{{ accueilCtrl.carac11 + accueilCtrl.carac12 }}</span>
 			<span class="textCarac carac1 fleche flecheHaut">attaque</span>
 			<span class="textCarac carac1">physique</span>
-			<span class="valeurCarac valeurCaracCumulDefense">{{accueilCtrl.carac13 + accueilCtrl.carac14}}</span>
+			<span class="champSaisi valeurCarac valeurCaracCumulDefense">{{ accueilCtrl.carac13 + accueilCtrl.carac14 }}</span>
 			<span class="textCarac carac1 fleche flecheBas">défense</span>
 			<div class="quart quart1">
-				<input type="text" class="valeurCarac" ng-model="accueilCtrl.carac11" />
+				<input type="number" class="champSaisi valeurCarac" ng-model="accueilCtrl.carac11" />
 				<span class="textQuart textQuartHaut">
 					martialité
 				</span>
 			</div>
 			<div class="quart quart2">
-				<input type="text" class="valeurCarac" ng-model="accueilCtrl.carac12" />
+				<input type="number" class="champSaisi valeurCarac" ng-model="accueilCtrl.carac12" />
 				<span class="textQuart textQuartHaut">force</span>
 			</div>
 			<div class="quart quart3">
-				<input type="text" class="valeurCarac" ng-model="accueilCtrl.carac13" />
+				<input type="number" class="champSaisi valeurCarac" ng-model="accueilCtrl.carac13" />
 				<span class="textQuart textQuartBas">mobilité</span>
 			</div>
 			<div class="quart quart4">
-				<input type="text" class="valeurCarac" ng-model="accueilCtrl.carac14" />
+				<input type="number" class="champSaisi valeurCarac" ng-model="accueilCtrl.carac14" />
 				<span class="textQuart textQuartBas">solidité</span>
 			</div>
 		</div>
 		<div class="caracGroup carac1 lstCompetences">
-Coordination (Immobilisation / Souplesse)<BR>
-Levage (Levée / Sortie de saisie / Escalade)<BR>
-Athlétisme (Sprint / Endurance / Natation / Saut)<BR>
-Santé (Résistance physique / Résistance saisie)<BR>
-<BR>
-(S) Minutie (Subtilisation / Crochetage / Désamorçage)<BR>
-(S) Intimidation (Dissuasion / Malus de combat)<BR>
-(S) Discrétion (Déplacements discrets)<BR>
-(S) Bélier (Enfoncer une structure / Renverser créature)
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="120px">
+						Coordination
+					    <md-tooltip md-direction="bottom">(Immobilisation / Souplesse)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence11" />
+					</td>
+					<td>
+						+ [Martialité]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac11 + accueilCtrl.competence11 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Levage
+					    <md-tooltip md-direction="bottom">(Levée / Sortie de saisie / Escalade)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence12" />
+					</td>
+					<td>
+						+ [Force]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac12 + accueilCtrl.competence12 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Athlétisme
+					    <md-tooltip md-direction="bottom">(Sprint / Endurance / Natation / Saut)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence13" />
+					</td>
+					<td>
+						+ [Mobilité]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac13 + accueilCtrl.competence13 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Santé
+					    <md-tooltip md-direction="bottom">(Résistance physique / Résistance saisie)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence14" />
+					</td>
+					<td>
+						+ [Solidité]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac14 + accueilCtrl.competence14 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(S) Minutie
+					    <md-tooltip md-direction="bottom">(Subtilisation / Crochetage / Désamorçage)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence15" />
+					</td>
+					<td>
+						+ [Martialité]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac11 + accueilCtrl.competence15 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(S) Intimidation
+					    <md-tooltip md-direction="bottom">(Dissuasion / Malus de combat)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence16" />
+					</td>
+					<td>
+						+ [Force]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac12 + accueilCtrl.competence16 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(S) Discrétion
+					    <md-tooltip md-direction="bottom">(Déplacements discrets)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence17" />
+					</td>
+					<td>
+						+ [Mobilité]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac13 + accueilCtrl.competence17 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(S) Bélier
+					    <md-tooltip md-direction="bottom">(Enfoncer une structure / Renverser créature)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence18" />
+					</td>
+					<td>
+						+ [Solidité]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac14 + accueilCtrl.competence18 }}</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="caracGroup carac1 lstTalents">
+			liste talents !
 		</div>
 	</div>
 	<div class="caracGroup carac2">
 		<div class="carac carac2">
-			<span class="valeurCarac valeurCaracCumulAttaque">{{ (accueilCtrl.carac21 + accueilCtrl.carac22) }}</span>
+			<span class="champSaisi valeurCarac valeurCaracCumulAttaque">{{ (accueilCtrl.carac21 + accueilCtrl.carac22) }}</span>
 			<span class="textCarac carac2 fleche flecheHaut">attaque</span>
 			<span class="textCarac carac2">sensorielle</span>
-			<span class="valeurCarac valeurCaracCumulDefense">{{accueilCtrl.carac23 + accueilCtrl.carac24}}</span>
+			<span class="champSaisi valeurCarac valeurCaracCumulDefense">{{accueilCtrl.carac23 + accueilCtrl.carac24}}</span>
 			<span class="textCarac carac2 fleche flecheBas">défense</span>
 			<div class="quart quart1">
-				<input type="text" class="valeurCarac" ng-model="accueilCtrl.carac21" />
+				<input type="number" class="champSaisi valeurCarac" ng-model="accueilCtrl.carac21" />
 				<span class="textQuart textQuartHaut">perception</span>
 			</div>
 			<div class="quart quart2">
-				<input type="text" class="valeurCarac" ng-model="accueilCtrl.carac22" />
+				<input type="number" class="champSaisi valeurCarac" ng-model="accueilCtrl.carac22" />
 				<span class="textQuart textQuartHaut">précision</span>
 			</div>
 			<div class="quart quart3">
-				<input type="text" class="valeurCarac" ng-model="accueilCtrl.carac23" />
+				<input type="number" class="champSaisi valeurCarac" ng-model="accueilCtrl.carac23" />
 				<span class="textQuart textQuartBas">anticipation</span>
 			</div>
 			<div class="quart quart4">
-				<input type="text" class="valeurCarac" ng-model="accueilCtrl.carac24" />
+				<input type="number" class="champSaisi valeurCarac" ng-model="accueilCtrl.carac24" />
 				<span class="textQuart textQuartBas">équilibre</span>
 			</div>
 		</div>
 		<div class="caracGroup carac2 lstCompetences">
-Repérage (Observation / Détection)<BR>
-Pistage (Lecture de piste / Fausse piste)<BR>
-Réflexe (Esquiver un danger / Attraper objet ou personne)<BR>
-Stabilité (Équitation / Rester stable)<BR>
-<BR>
-(S) Astuce (Camouflage / Déguisement / Falsification)<BR>
-(S) Rôdeur (Pieds légers / Affinage)<BR>
-(S) Survie (Orientation / Techniques de survies)<BR>
-(S) Acrobatie (Réception / Dégagement / Déplacements)
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="120px">
+						Repérage
+					    <md-tooltip md-direction="bottom">(Observation / Détection)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence21" />
+					</td>
+					<td>
+						+ [Perception]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac21 + accueilCtrl.competence21 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Pistage
+					    <md-tooltip md-direction="bottom">(Lecture de piste / Fausse piste)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence22" />
+					</td>
+					<td>
+						+ [Précision]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac22 + accueilCtrl.competence22 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Réflexe
+					    <md-tooltip md-direction="bottom">(Esquiver un danger / Attraper objet ou personne)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence23" />
+					</td>
+					<td>
+						+ [Anticipation]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac23 + accueilCtrl.competence23 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Stabilité
+					    <md-tooltip md-direction="bottom">(Équitation / Rester stable)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence24" />
+					</td>
+					<td>
+						+ [Equilibre]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac24 + accueilCtrl.competence24 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(S) Astuce
+					    <md-tooltip md-direction="bottom">(Camouflage / Déguisement / Falsification)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence25" />
+					</td>
+					<td>
+						+ [Perception]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac21 + accueilCtrl.competence25 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(S) Rôdeur
+					    <md-tooltip md-direction="bottom">(Pieds légers / Affinage)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence26" />
+					</td>
+					<td>
+						+ [Précision]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac22 + accueilCtrl.competence26 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(S) Survie
+					    <md-tooltip md-direction="bottom">(Orientation / Techniques de survies)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence27" />
+					</td>
+					<td>
+						+ [Anticipation]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac23 + accueilCtrl.competence27 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(S) Acrobatie
+					    <md-tooltip md-direction="bottom">(Réception / Dégagement / Déplacements)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence28" />
+					</td>
+					<td>
+						+ [Equilibre]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac24 + accueilCtrl.competence28 }}</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="caracGroup carac2 lstTalents">
+			liste talents !
 		</div>
 	</div>
 	<div class="caracGroup carac3">
 		<div class="carac carac3">
-			<span class="valeurCarac valeurCaracCumulAttaque">{{ (accueilCtrl.carac31 + accueilCtrl.carac32) }}</span>
+			<span class="champSaisi valeurCarac valeurCaracCumulAttaque">{{ (accueilCtrl.carac31 + accueilCtrl.carac32) }}</span>
 			<span class="textCarac carac3 fleche flecheHaut">attaque</span>
 			<span class="textCarac carac3">psychique</span>
-			<span class="valeurCarac valeurCaracCumulDefense">{{accueilCtrl.carac33 + accueilCtrl.carac34}}</span>
+			<span class="champSaisi valeurCarac valeurCaracCumulDefense">{{accueilCtrl.carac33 + accueilCtrl.carac34}}</span>
 			<span class="textCarac carac3 fleche flecheBas">défense</span>
 			<div class="quart quart1">
-				<input type="text" class="valeurCarac" ng-model="accueilCtrl.carac31" />
+				<input type="number" class="champSaisi valeurCarac" ng-model="accueilCtrl.carac31" />
 				<span class="textQuart textQuartHaut">sagacité</span>
 			</div>
 			<div class="quart quart2">
-				<input type="text" class="valeurCarac" ng-model="accueilCtrl.carac32" />
+				<input type="number" class="champSaisi valeurCarac" ng-model="accueilCtrl.carac32" />
 				<span class="textQuart textQuartHaut">énergie</span>
 			</div>
 			<div class="quart quart3">
-				<input type="text" class="valeurCarac" ng-model="accueilCtrl.carac33" />
+				<input type="number" class="champSaisi valeurCarac" ng-model="accueilCtrl.carac33" />
 				<span class="textQuart textQuartBas">conscience</span>
 			</div>
 			<div class="quart quart4">
-				<input type="text" class="valeurCarac" ng-model="accueilCtrl.carac34" />
+				<input type="number" class="champSaisi valeurCarac" ng-model="accueilCtrl.carac34" />
 				<span class="textQuart textQuartBas">absorption</span>
 			</div>
 		</div>
 		<div class="caracGroup carac3 lstCompetences">
-Savoir (Connaissances / Persuasion / Discours)<BR>
-Impulsion (Sondage psychique / Lumière)<BR>
-Ressenti (Recherche psychique / Détection psychique)<BR>
-Volonté (Résistance psychique)<BR>
-<BR>
-(S) Commerce (Marchandage / Sens des affaires)<BR>
-(S) Spiritisme (Invocation / Divination)<BR>
-(S) Perturbation (Masquage psychique / Contre psychique)<BR>
-(S) Dissipation (Assimilation / Bannissement)
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="120px">
+						Savoir
+					    <md-tooltip md-direction="bottom">(Connaissances / Persuasion / Discours)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence31" />
+					</td>
+					<td>
+						+ [Sagacité]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac31 + accueilCtrl.competence31 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Impulsion
+					    <md-tooltip md-direction="bottom">(Sondage psychique / Lumière)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence32" />
+					</td>
+					<td>
+						+ [Energie]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac32 + accueilCtrl.competence32 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Ressenti
+					    <md-tooltip md-direction="bottom">(Recherche psychique / Détection psychique)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence33" />
+					</td>
+					<td>
+						+ [Conscience]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac33 + accueilCtrl.competence33 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Volonté
+					    <md-tooltip md-direction="bottom">(Résistance psychique)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence34" />
+					</td>
+					<td>
+						+ [Absorption]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac34 + accueilCtrl.competence34 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(S) Commerce
+					    <md-tooltip md-direction="bottom">(Marchandage / Sens des affaires)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence35" />
+					</td>
+					<td>
+						+ [Sagacité]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac31 + accueilCtrl.competence35 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(S) Spiritisme
+					    <md-tooltip md-direction="bottom">(Invocation / Divination)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence36" />
+					</td>
+					<td>
+						+ [Energie]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac32 + accueilCtrl.competence36 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(S) Perturbation
+					    <md-tooltip md-direction="bottom">(Masquage psychique / Contre psychique)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence37" />
+					</td>
+					<td>
+						+ [Conscience]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac33 + accueilCtrl.competence37 }}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(S) Dissipation
+					    <md-tooltip md-direction="bottom">(Assimilation / Bannissement)</md-tooltip>
+					</td>
+					<td>
+						<input type="number" class="champSaisi" ng-model="accueilCtrl.competence38" />
+					</td>
+					<td>
+						+ [Absorption]
+					</td>
+					<td class="champSaisi">
+						<span>{{ accueilCtrl.carac34 + accueilCtrl.competence38 }}</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="caracGroup carac3 lstTalents">
+			liste talents !
 		</div>
 	</div>
 
