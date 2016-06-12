@@ -46,5 +46,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# node module
+# on ignore les modules importés
 node_modules/**
+bower_components/**
