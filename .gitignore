@@ -49,3 +49,7 @@ Temporary Items
 # on ignore les modules importés
 node_modules/**
 bower_components/**
+
+# on ignore les répertoires de build
+build/.tmp/**
+build/dist/**
