@@ -1,0 +1,51 @@
+<div class="caracGroup carac{{sphereTalentsCtrl.indiceSphere}} lstTalents">
+	<table width="100%" cellpadding="1" cellspacing="0">
+		<tr>
+			<th>
+				&nbsp;
+			</th>
+			<th>
+				Coût
+			</th>
+			<th>
+				Diff.
+			</th>
+			<th>
+				Rang
+			</th>
+			<th>
+				Carac
+			</th>
+			<th>
+				Total
+			</th>
+			<th>
+				Bonus
+			</th>
+		</tr>
+		<tr>
+			<td width="120px">
+				Tire en mouvement
+			    <md-tooltip md-direction="bottom">	Inflige [DBASE] et gagne un déplacement (sortie de CaC OK)</md-tooltip>
+			</td>
+			<td>
+				4
+			</td>
+			<td>
+				8+X (Terrain)
+			</td>
+			<td>
+				<input type="number" class="champSaisi" ng-model="sphereTalentsCtrl.talent21" />
+			</td>
+			<td>
+				+ [Perception]
+			</td>
+			<td class="champSaisi">
+				<span>{{ sphereTalentsCtrl.carac21 + sphereTalentsCtrl.talent21 }}</span>
+			</td>
+			<td>
+				<input type="number" class="champSaisi" ng-model="sphereTalentsCtrl.bonusTalent21" />
+			</td>
+		</tr>
+	</table>
+</div>

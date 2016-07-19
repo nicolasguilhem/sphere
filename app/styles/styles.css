@@ -42,7 +42,7 @@
 }
 
 .flecheHaut {
-    top: 20px;
+    top: 19px;
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
     border-left: 0px;
@@ -149,13 +149,13 @@
     left: 23px;
 }
 
-.valeurCaracCumulAttaque {
+.valeurCaracCumulHaut {
     top: -24px;
     left: 62px;
     background: white;
 }
 
-.valeurCaracCumulDefense {
+.valeurCaracCumulBas {
     top: 164px;
     left: 62px;
     background: white;
