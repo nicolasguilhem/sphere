@@ -16,6 +16,7 @@ module sphere.glob.accueil {
 
 		public msLibelle: string;
 		public lstTypCarac: Array<TypCarac>;
+		public lstCompetence: Array<Competence>;
 
 		constructor (psLibelle: string) {
 			this.msLibelle = psLibelle;
@@ -40,6 +41,23 @@ module sphere.glob.accueil {
 		constructor (psLibelle: string, piValeur: number) {
 			this.msLibelle = psLibelle;
 			this.miValeur = piValeur;
+		}
+	}
+
+	export class Competence {
+
+		public msLibelle: string;
+		public msDescri: string;
+		public miValeur: number;
+		public moCarac: Carac;
+		public mbSpecial: boolean;
+
+		constructor (psLibelle: string, psDescri: string, pbSpecial: boolean, piValeur: number, poCarac: Carac) {
+			this.msLibelle = psLibelle;
+			this.msDescri = psDescri;
+			this.miValeur = piValeur;
+			this.moCarac = poCarac;
+			this.mbSpecial = pbSpecial;
 		}
 	}
 }

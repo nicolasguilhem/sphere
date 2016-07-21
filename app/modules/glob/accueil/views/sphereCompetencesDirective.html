@@ -1,128 +1,21 @@
 <div class="caracGroup carac{{sphereCompetencesCtrl.indiceSphere}} lstCompetences">
 	<table width="100%" cellpadding="0" cellspacing="0">
-		<tr>
+		<tr ng-repeat="comp in sphereCompetencesCtrl.lstCompetenceCourante">
 			<td width="120px">
-				Coordination
-			    <md-tooltip md-direction="bottom">(Immobilisation / Souplesse)</md-tooltip>
+				{{comp.msLibelle}}
+				<span ng-if="comp.mbSpecial">*</span>
+			    <md-tooltip md-direction="bottom">
+			    	{{comp.msDescri}}
+				</md-tooltip>
 			</td>
 			<td>
-				<input type="number" class="champSaisi" ng-model="sphereCompetencesCtrl.competence11" />
+				<input type="number" class="champSaisi" ng-model="comp.miValeur" />
 			</td>
 			<td>
-				+ [Martialité]
+				+ [{{comp.moCarac.msLibelle}}]
 			</td>
 			<td class="champSaisi">
-				<span>{{ sphereCompetencesCtrl.carac11 + sphereCompetencesCtrl.competence11 }}</span>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				Levage
-			    <md-tooltip md-direction="bottom">(Levée / Sortie de saisie / Escalade)</md-tooltip>
-			</td>
-			<td>
-				<input type="number" class="champSaisi" ng-model="sphereCompetencesCtrl.competence12" />
-			</td>
-			<td>
-				+ [Force]
-			</td>
-			<td class="champSaisi">
-				<span>{{ sphereCompetencesCtrl.carac12 + sphereCompetencesCtrl.competence12 }}</span>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				Athlétisme
-			    <md-tooltip md-direction="bottom">(Sprint / Endurance / Natation / Saut)</md-tooltip>
-			</td>
-			<td>
-				<input type="number" class="champSaisi" ng-model="sphereCompetencesCtrl.competence13" />
-			</td>
-			<td>
-				+ [Mobilité]
-			</td>
-			<td class="champSaisi">
-				<span>{{ sphereCompetencesCtrl.carac13 + sphereCompetencesCtrl.competence13 }}</span>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				Santé
-			    <md-tooltip md-direction="bottom">(Résistance physique / Résistance saisie)</md-tooltip>
-			</td>
-			<td>
-				<input type="number" class="champSaisi" ng-model="sphereCompetencesCtrl.competence14" />
-			</td>
-			<td>
-				+ [Solidité]
-			</td>
-			<td class="champSaisi">
-				<span>{{ sphereCompetencesCtrl.carac14 + sphereCompetencesCtrl.competence14 }}</span>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				&nbsp;
-			</td>
-		</tr>
-		<tr>
-			<td>
-				(S) Minutie
-			    <md-tooltip md-direction="bottom">(Subtilisation / Crochetage / Désamorçage)</md-tooltip>
-			</td>
-			<td>
-				<input type="number" class="champSaisi" ng-model="sphereCompetencesCtrl.competence15" />
-			</td>
-			<td>
-				+ [Martialité]
-			</td>
-			<td class="champSaisi">
-				<span>{{ sphereCompetencesCtrl.carac11 + sphereCompetencesCtrl.competence15 }}</span>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				(S) Intimidation
-			    <md-tooltip md-direction="bottom">(Dissuasion / Malus de combat)</md-tooltip>
-			</td>
-			<td>
-				<input type="number" class="champSaisi" ng-model="sphereCompetencesCtrl.competence16" />
-			</td>
-			<td>
-				+ [Force]
-			</td>
-			<td class="champSaisi">
-				<span>{{ sphereCompetencesCtrl.carac12 + sphereCompetencesCtrl.competence16 }}</span>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				(S) Discrétion
-			    <md-tooltip md-direction="bottom">(Déplacements discrets)</md-tooltip>
-			</td>
-			<td>
-				<input type="number" class="champSaisi" ng-model="sphereCompetencesCtrl.competence17" />
-			</td>
-			<td>
-				+ [Mobilité]
-			</td>
-			<td class="champSaisi">
-				<span>{{ sphereCompetencesCtrl.carac13 + sphereCompetencesCtrl.competence17 }}</span>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				(S) Bélier
-			    <md-tooltip md-direction="bottom">(Enfoncer une structure / Renverser créature)</md-tooltip>
-			</td>
-			<td>
-				<input type="number" class="champSaisi" ng-model="sphereCompetencesCtrl.competence18" />
-			</td>
-			<td>
-				+ [Solidité]
-			</td>
-			<td class="champSaisi">
-				<span>{{ sphereCompetencesCtrl.carac14 + sphereCompetencesCtrl.competence18 }}</span>
+				<span>{{ comp.miValeur + comp.moCarac.miValeur }}</span>
 			</td>
 		</tr>
 	</table>
