@@ -1,16 +1,18 @@
-<span class="textCarac carac{{sphereCaracGroupCtrl.indiceSphere}} fleche fleche{{sphereCaracGroupCtrl.calculTypeFleche()}}">{{sphereCaracGroupCtrl.caracGroupCourant.msLibelle}}</span>
-<span class="champSaisi valeurCarac valeurCaracCumul{{sphereCaracGroupCtrl.calculTypeFleche()}}">{{ sphereCaracGroupCtrl.caracGroupCourant.lstCarac[0].miValeur + sphereCaracGroupCtrl.caracGroupCourant.lstCarac[1].miValeur }}</span>
-<div class="quart quart{{sphereCaracGroupCtrl.calculNumeroQuart(1)}}">
+<span ng-if="sphereCaracGroupCtrl.indiceTypCarac == 0" class="champSaisi valeurCarac valeurCaracCumul{{sphereCaracGroupCtrl.calculTypeFleche()}}">{{ sphereCaracGroupCtrl.caracGroupCourant.lstCarac[0].miValeur + sphereCaracGroupCtrl.caracGroupCourant.lstCarac[1].miValeur }}</span>
+<span ng-if="sphereCaracGroupCtrl.indiceTypCarac == 0" class="textCarac carac{{sphereCaracGroupCtrl.indiceSphere}} fleche fleche{{sphereCaracGroupCtrl.calculTypeFleche()}}">{{sphereCaracGroupCtrl.caracGroupCourant.msLibelle}}</span>
+<div class="quart quart{{sphereCaracGroupCtrl.calculTypeFleche()}}">
 	<input type="number" class="champSaisi valeurCarac"
 		ng-model="sphereCaracGroupCtrl.caracGroupCourant.lstCarac[0].miValeur" />
 	<span class="textQuart textQuart{{sphereCaracGroupCtrl.calculTypeFleche()}}">
 		{{sphereCaracGroupCtrl.caracGroupCourant.lstCarac[0].msLibelle}}
 	</span>
 </div>
-<div class="quart quart{{sphereCaracGroupCtrl.calculNumeroQuart(2)}}">
+<div class="quart quart{{sphereCaracGroupCtrl.calculTypeFleche()}}">
 	<input type="number" class="champSaisi valeurCarac" 
 		ng-model="sphereCaracGroupCtrl.caracGroupCourant.lstCarac[1].miValeur" />
 	<span class="textQuart textQuart{{sphereCaracGroupCtrl.calculTypeFleche()}}">
 		{{sphereCaracGroupCtrl.caracGroupCourant.lstCarac[1].msLibelle}}
 	</span>
 </div>
+<span ng-if="sphereCaracGroupCtrl.indiceTypCarac == 1" class="textCarac carac{{sphereCaracGroupCtrl.indiceSphere}} fleche fleche{{sphereCaracGroupCtrl.calculTypeFleche()}}">{{sphereCaracGroupCtrl.caracGroupCourant.msLibelle}}</span>
+<span ng-if="sphereCaracGroupCtrl.indiceTypCarac == 1" class="champSaisi valeurCarac valeurCaracCumul{{sphereCaracGroupCtrl.calculTypeFleche()}}">{{ sphereCaracGroupCtrl.caracGroupCourant.lstCarac[0].miValeur + sphereCaracGroupCtrl.caracGroupCourant.lstCarac[1].miValeur }}</span>

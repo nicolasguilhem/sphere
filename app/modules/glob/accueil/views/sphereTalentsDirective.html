@@ -1,50 +1,32 @@
 <div class="caracGroup carac{{sphereTalentsCtrl.indiceSphere}} lstTalents">
 	<table width="100%" cellpadding="1" cellspacing="0">
 		<tr>
-			<th>
-				&nbsp;
-			</th>
-			<th>
-				Coût
-			</th>
-			<th>
-				Diff.
-			</th>
-			<th>
-				Rang
-			</th>
-			<th>
-				Carac
-			</th>
-			<th>
-				Total
-			</th>
-			<th>
-				Bonus
-			</th>
+			<th>&nbsp;</th>
+			<th>Coût</th>
+			<th>Diff.</th>
+			<th>Rang</th>
+			<th>Carac</th>
+			<th>Total</th>
 		</tr>
-		<tr>
+		<tr ng-repeat="talent in sphereTalentsCtrl.lstTalentCourant | orderBy:'moCarac.msLibelle'">
 			<td width="120px">
-				Tire en mouvement
-			    <md-tooltip md-direction="bottom">	Inflige [DBASE] et gagne un déplacement (sortie de CaC OK)</md-tooltip>
+				{{talent.msLibelle}}
+			    <md-tooltip md-direction="bottom">{{talent.msDescri}}</md-tooltip>
 			</td>
 			<td>
-				4
+				{{talent.msCout}}
 			</td>
 			<td>
-				8+X (Terrain)
+				{{talent.msDifficulte}}
 			</td>
 			<td>
-				<input type="number" class="champSaisi" ng-model="sphereTalentsCtrl.talent21" />
+				<input type="number" class="champSaisi" ng-model="talent.miValeur" />
 			</td>
 			<td>
-				+ [Perception]
+				+ [{{talent.moCarac.msLibelle}}]
 			</td>
 			<td class="champSaisi">
-				<span>{{ sphereTalentsCtrl.carac21 + sphereTalentsCtrl.talent21 }}</span>
-			</td>
-			<td>
-				<input type="number" class="champSaisi" ng-model="sphereTalentsCtrl.bonusTalent21" />
+				<span>{{ talent.miValeur + talent.moCarac.miValeur }}</span>
 			</td>
 		</tr>
 	</table>

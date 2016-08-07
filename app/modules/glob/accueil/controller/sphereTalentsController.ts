@@ -7,9 +7,14 @@ module sphere.glob.accueil {
 	export class sphereTalentsController {
 
 	  	private indiceSphere: number;
+	  	private spheres: Spheres;
+	  	private sphereCourante: Sphere;
+	  	private lstTalentCourant: Array<Talent>;
+
 
 		constructor () {
-			
+			this.sphereCourante = this.spheres.lstSphere[this.indiceSphere-1];
+			this.lstTalentCourant = this.sphereCourante.lstTalent;
 		}
 	  
 	}

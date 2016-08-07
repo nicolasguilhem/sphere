@@ -1,11 +1,25 @@
-<div class="caracGroup carac{{sphereCtrl.indiceSphere}}">
-	<sphere-carac-directive
-		indice-sphere="sphereCtrl.indiceSphere"
-		spheres="sphereCtrl.spheres"></sphere-carac-directive>
-	<sphere-competences-directive 
-		indice-sphere="sphereCtrl.indiceSphere"
- 		spheres="sphereCtrl.spheres"></sphere-competences-directive>
-	<sphere-talents-directive
-		indice-sphere="sphereCtrl.indiceSphere"
-		spheres="sphereCtrl.spheres"></sphere-talents-directive>
-</div>
+<div layout="row">
+	<div class="caracGroup carac{{sphereCtrl.indiceSphere}}">
+		<sphere-carac-directive
+			indice-sphere="sphereCtrl.indiceSphere"
+			spheres="sphereCtrl.spheres"></sphere-carac-directive>
+		<sphere-carac-group-directive
+			indice-sphere="sphereCtrl.indiceSphere" 
+			indice-typ-carac="0" 
+			spheres="sphereCtrl.spheres"></sphere-carac-group-directive>
+		<sphere-carac-group-directive
+			indice-sphere="sphereCtrl.indiceSphere" 
+			indice-typ-carac="1" 
+			spheres="sphereCtrl.spheres"></sphere-carac-group-directive>
+	</div>
+	<div>
+		<sphere-competences-directive 
+			indice-sphere="sphereCtrl.indiceSphere"
+	 		spheres="sphereCtrl.spheres"></sphere-competences-directive>
+ 	</div>
+ 	<div>
+ 		<sphere-talents-directive
+			indice-sphere="sphereCtrl.indiceSphere"
+			spheres="sphereCtrl.spheres"></sphere-talents-directive>
+ 	</div>
+ </div>

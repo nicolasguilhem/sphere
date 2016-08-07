@@ -1,29 +1,29 @@
+
 .caracGroup {
+    display: flex;
+    position: relative;
+    align-items: center;
     border: 1px;
     border-style: solid;
     border-radius: 80px;
     margin: 10px;
     width: 160px;
     height: 216px;
-    text-align: center;
 }
 
 .carac {
+    display: flex;
+    align-items: center;
     border: 1px;
     border-style: solid;
     border-radius: 80px;
-    margin: 10px;
     width: 160px;
     height: 160px;
-    text-align: center;
-    top: 17px;
-    left: -11px;
-    position: relative;
 }
 
 .textCarac {
-    position: relative;
-    top: 70px;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: bold;
     border: 1px;
     border-style: solid;
@@ -34,67 +34,54 @@
     font-size: small;
 }
 
-.fleche{
-    width: 57px;
+sphere-carac-group-directive {
     position: absolute;
-    left: 46px;
+    top: 124px;
+    width: 160px;
+}
+
+sphere-carac-group-directive:first-of-type {
+    top: 5px;
+}
+
+.fleche {
+    display: block;
+    position: relative;
+    width: 57px;
     transform: rotate(-90deg);
 }
 
 .flecheHaut {
-    top: 19px;
+    top: 23px;
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
     border-left: 0px;
 }
 
 .flecheBas {
-    top: 113px;
+    top: -23px;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
     border-right: 0px;
 }
 
 .quart {
-    position: relative;
     border: 1px;
-    width: 80px;
-    height: 80px;
+    width: 77px;
+    height: 41px;
+    display: inline-block;
 }
 
 .textQuart {
-    position: relative;
+    display: block;
+    text-align: center;
     text-transform: capitalize;
     font-size: small;
 }
-.textQuartHaut {
-    position: relative;
-    top: 50px;
-}
-.textQuartBas {
-    position: relative;
-    top: 11px;
-}
-.quart1 {
-    top: -19px;
-    border-right-style: dotted;
+
+.quartHaut {
+    height: 57px;
     border-bottom-style: dotted;
-}
-
-.quart2 {
-    top: -100px;
-    left: 80px;
-}
-
-.quart3 {
-    top: -100px;
-}
-
-.quart4 {
-    top: -180px;
-    left: 80px;
-    border-left-style: dotted;
-    border-top-style: dotted;
 }
 
 .carac1 {
@@ -133,7 +120,7 @@
     background: rgba(69, 176, 187, 0.5);
 }
 
-.champSaisi {
+.champSaisi, .lstTalents td.champSaisi {
     width: 31px;
     text-align: center;
     height: 14px;
@@ -144,43 +131,31 @@
 }
 
 .valeurCarac {
-    position: absolute;
-    top: 29px;
-    left: 23px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .valeurCaracCumulHaut {
-    top: -24px;
-    left: 62px;
     background: white;
 }
 
 .valeurCaracCumulBas {
-    top: 164px;
-    left: 62px;
     background: white;
 }
 
 .lstCompetences {
-    position: relative;
-    top: -183px;
-    left: 170px;
     border-radius: 20px;
     width: 300px;
     height: 200px;
     padding: 5px;
-    text-align: left;
 }
 
 .lstTalents {
-    position: relative;
-    top: -405px;
-    left: 500px;
     border-radius: 20px;
     width: 450px;
     height: 200px;
     padding: 5px;
-    text-align: left;
     font-size: small;
 }
 

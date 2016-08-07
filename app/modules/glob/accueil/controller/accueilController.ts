@@ -47,10 +47,10 @@ module sphere.glob.accueil {
 			sphere2.lstTypCarac = [TypCarac21, TypCarac22];
 
 			var Comp211 = new Competence('Repérage', '(Observation / Détection)', false, 6,  TypCarac21.lstCarac[0]);
-			var Comp212 = new Competence('Astuce', '(Camouflage / Déguisement / Falsification)', true, 6,  TypCarac11.lstCarac[0]);
+			var Comp212 = new Competence('Astuce', '(Camouflage / Déguisement / Falsification)', true, 6,  TypCarac21.lstCarac[0]);
 
 			var Comp221 = new Competence('Pistage', '(Lecture de piste / Fausse piste)', false, 6,  TypCarac21.lstCarac[1]);
-			var Comp222 = new Competence('Rôdeur', '(Pieds légers / Affinage)', true, 6,  TypCarac11.lstCarac[1]);
+			var Comp222 = new Competence('Rôdeur', '(Pieds légers / Affinage)', true, 6,  TypCarac21.lstCarac[1]);
 
 			var Comp231 = new Competence('Réflexe', '(Esquiver un danger / Attraper objet ou personne)', false, 6,  TypCarac22.lstCarac[0]);
 			var Comp232 = new Competence('Survie', '(Orientation / Techniques de survies)', true, 6,  TypCarac22.lstCarac[0]);
@@ -59,6 +59,15 @@ module sphere.glob.accueil {
 			var Comp242 = new Competence('Acrobatie', '(Réception / Dégagement / Déplacements)', true, 6,  TypCarac22.lstCarac[1]);
 
 			sphere2.lstCompetence = [Comp211, Comp212, Comp221, Comp222, Comp231, Comp232, Comp241, Comp242];
+
+			var talent1 = new Talent ('Tire en mouvement', 'Inflige [DBASE] et gagne un déplacement (sortie de CaC OK)',
+				'4', '8 + X (terrain)', 6, TypCarac21.lstCarac[0]);
+			var talent2 = new Talent ('Tire en pleine tête', 'Inflige [DBASE] et gagne un déplacement (sortie de CaC OK)',
+							'4', '10', 6, TypCarac21.lstCarac[0]);
+			var talent3 = new Talent ('Tire dans le bide', 'Inflige [DBASE] et gagne un déplacement (sortie de CaC OK)',
+										'4', '10', 6, TypCarac21.lstCarac[1]);
+
+			sphere2.lstTalent = [talent1, talent3, talent2];
 
 			var sphere3 = new Sphere('psychique');
 
